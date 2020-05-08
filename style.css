@@ -1,0 +1,98 @@
+*{
+  margin:0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+header{
+  background: linear-gradient(45deg,#CCFFFF,#FFCCCC);
+  margin: 0px;
+  padding: 10px;
+  height: auto;
+
+}
+
+header > h1{
+  text-align: center;
+}
+
+body{
+  background-image: url("h.jpg");
+}
+
+.move{
+
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  padding: 10px;
+  margin: 50px auto;
+
+  animation-name: go;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  position:relative;
+
+  box-shadow: 50px 25px #d0d5d2;
+ }
+
+ @keyframes go{
+    0% {
+      left: 0px;
+    }
+
+
+    33% {
+      left: 45%;
+    }
+
+    66% {
+      left:-45%;
+    }
+    100% {
+      left:0px;
+    }
+ }
+
+.heart{
+  background-color: pink;
+  height: 100px;
+  width: 100px;
+  transform: rotate(-45deg);
+  position: absolute;
+
+  margin: auto;
+    top: 200px;
+    right: 0;
+    bottom: 0;
+    left: 25px;
+
+    animation-name: go;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+.heart::after{
+  background-color: pink;
+  content: "";
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  border-radius: 50%;
+  top: 0;
+  left: 50px;
+
+}
+
+.heart::before{
+  background-color: pink;
+  content: "";
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  border-radius: 50%;
+  top: -50px;
+  left: 0px;
+
+}
